@@ -10,12 +10,11 @@ describe("Test after clicking the List icon, the items of the page are displayed
     cy.get("#ui-id-11").trigger("mouseover").contains("Jackets").click();
     //Verify title of the page
     cy.get(".base").contains("Jackets");
+    cy.wait(5000);
     //Click on the list icon
-    cy.get(":nth-child(3) > .modes > #mode-list").click();
-    //vrify the content after clicking the list icon
-    cy.get(
-      ":nth-child(1) > .product-item-info > .photo > .product-image-container > .product-image-wrapper > .product-image-photo"
-    );
-    cy.get(":nth-child(1) > .product-item-info > .details");
+    cy.get(":nth-child(3) > .modes > #mode-list").trigger("click");
+    //Verify the content of the page after clicking the list icon
+    cy.get('[class="products wrapper list products-list"]').should("exist");
+    cy.get('[class="products wrapper grid products-list"]').should("not.exist");
   });
 });
