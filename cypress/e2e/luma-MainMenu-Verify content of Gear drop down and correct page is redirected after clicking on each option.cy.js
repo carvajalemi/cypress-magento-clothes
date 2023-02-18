@@ -1,6 +1,7 @@
 describe("Test  content of Gear drop down and correct page is redirected after clicking on each option", () => {
   it("should validate content of Gear drop down and correct page is redirected after clicking on each option", () => {
-    cy.visit("https://magento.softwaretestingboard.com/what-is-new.html");
+    cy.visit(Cypress.env("baseUrls"));
+    //cy.visit("https://magento.softwaretestingboard.com/what-is-new.html");
 
     //Get Gear menu option and do mouserover to expand drop down options
     cy.get("#ui-id-6 > :nth-child(2)").trigger("mouseover").contains("Gear");
