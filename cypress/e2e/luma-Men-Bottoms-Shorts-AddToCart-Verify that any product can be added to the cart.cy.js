@@ -16,11 +16,11 @@ describe("Test that any product can be added to the cart", () => {
       ":nth-child(2) > .product-item-info > .photo > .product-image-container > .product-image-wrapper > .product-image-photo"
     ).click();
 
-    cy.get(5000);
+    cy.wait(5000);
     //Verify the title of the selected short
     cy.get(".base").contains("Arcadio Gym Short");
 
-    cy.get(5000);
+    cy.wait(5000);
     //select the size
     cy.get("#option-label-size-143-item-176").click();
 
@@ -42,16 +42,16 @@ describe("Test that any product can be added to the cart", () => {
     cy.get(".showcart").click();
 
     //verify the item that was added to the cart is displayed in the list
-    //cy.get(
-    // "#mini-cart > .item > :nth-child(1) > .product-item-details > .product-item-name > a"
-    //);
+    cy.get(
+      "#mini-cart > .item > :nth-child(1) > .product-item-details > .product-item-name > a"
+    );
     //remove the added item
     cy.get(".product-item-details > .actions > .secondary > .action").click();
 
     //verify content of the remove modal
-    /*cy.get("#modal-content-40 > div").contains(
+    cy.get("#modal-content-40 > div").contains(
       "Are you sure you would like to remove this item from the shopping cart?"
-    );*/
+    );
 
     //click on the ok button to remove the item from the cart
     cy.get(".action-primary").click();
