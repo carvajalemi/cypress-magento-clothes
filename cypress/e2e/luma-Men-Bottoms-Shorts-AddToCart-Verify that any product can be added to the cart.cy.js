@@ -16,11 +16,11 @@ describe("Test that any product can be added to the cart", () => {
       ":nth-child(2) > .product-item-info > .photo > .product-image-container > .product-image-wrapper > .product-image-photo"
     ).click();
 
-    cy.get(4000);
+    cy.get(5000);
     //Verify the title of the selected short
     cy.get(".base").contains("Arcadio Gym Short");
 
-    cy.get(4000);
+    cy.get(5000);
     //select the size
     cy.get("#option-label-size-143-item-176").click();
 
