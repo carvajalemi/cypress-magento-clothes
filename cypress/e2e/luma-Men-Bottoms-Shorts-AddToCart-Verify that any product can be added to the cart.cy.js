@@ -16,6 +16,7 @@ describe("Test that any product can be added to the cart", () => {
       ":nth-child(2) > .product-item-info > .photo > .product-image-container > .product-image-wrapper > .product-image-photo"
     ).click();
 
+    cy.get(4000);
     //Verify the title of the selected short
     cy.get(".base").contains("Arcadio Gym Short");
 
