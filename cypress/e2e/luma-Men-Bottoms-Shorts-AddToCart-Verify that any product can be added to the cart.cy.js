@@ -52,6 +52,7 @@ describe("Test that any product can be added to the cart", () => {
     cy.get("#modal-content-40 > div").contains(
       "Are you sure you would like to remove this item from the shopping cart?"
     );
+
     //click on the ok button to remove the item from the cart
     cy.get(".action-primary").click();
 
