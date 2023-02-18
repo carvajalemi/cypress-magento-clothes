@@ -31,6 +31,7 @@ describe("Test the content of the Shopping Options menu, expand and collapse opt
     cy.get(
       '[href="https://magento.softwaretestingboard.com/men/tops-men/tees-men.html?size=166"] > .swatch-option'
     ).contains("XS");
+    cy.wait(5000);
     //Collapse option
     cy.get(":nth-child(2) > .filter-options-title").contains("Size").click();
     //Verify content after collapsing the option

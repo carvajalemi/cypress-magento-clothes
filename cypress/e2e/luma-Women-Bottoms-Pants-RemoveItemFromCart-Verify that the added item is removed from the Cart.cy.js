@@ -19,6 +19,7 @@ describe("Test that the added item is removed from the Cart", () => {
     //verify the type of the selected pants
     cy.get(".base").contains("Portia Capri");
 
+    cy.wait(5000);
     //select the size
     cy.get("#option-label-size-143-item-171").click();
 
