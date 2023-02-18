@@ -19,6 +19,7 @@ describe("Test that any product can be added to the cart", () => {
     //Verify the title of the selected short
     cy.get(".base").contains("Arcadio Gym Short");
 
+    cy.get(4000);
     //select the size
     cy.get("#option-label-size-143-item-176").click();
 
